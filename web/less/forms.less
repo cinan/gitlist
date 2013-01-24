@@ -272,7 +272,7 @@ textarea[class*="span"],
 input[disabled],
 select[disabled],
 textarea[disabled],
-input[readonly],
+input[readonly]:not(.ignore-readonly),
 select[readonly],
 textarea[readonly] {
   cursor: not-allowed;
@@ -420,7 +420,7 @@ select:focus:required:invalid {
 .input-prepend {
   .add-on,
   .btn {
-    margin-right: -1px;
+    margin-right: -5px;
   }
   .add-on:first-child,
   .btn:first-child {

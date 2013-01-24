@@ -14,6 +14,14 @@
                 </div>
                 <a href="{{ path('rss', {repo: repo, branch: branch}) }}" class="rss-icon"><i class="rss"></i></a>
             </div>
+
+            {% if clone_url and parent is null %}
+                <hr>
+                <div class="input-prepend">
+                    <span class="add-on"><strong>Clone this repository</strong></span>
+                    <input type="text" id="clone-repo" value="{{ clone_url }}:{{ repo }}" readonly class="url-field ignore-readonly monospace">
+                </div>
+            {% endif  %}
         {% endblock %}
     {% endembed %}
 

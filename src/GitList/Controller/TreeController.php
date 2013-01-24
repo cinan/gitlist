@@ -40,6 +40,7 @@ class TreeController implements ControllerProviderInterface
                 'branches'       => $repository->getBranches(),
                 'tags'           => $repository->getTags(),
                 'readme'         => $app['util.repository']->getReadme($repo, $branch),
+				'clone_url'	     => $app['git.clone_host']
             ));
         })->assert('repo', $app['util.routing']->getRepositoryRegex())
           ->assert('branch', '[\w-._\/]+')

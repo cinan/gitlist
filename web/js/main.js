@@ -39,4 +39,8 @@ $(function () {
         $pager.find('.previous').remove();
     }
     paginate();
+
+    $('#clone-repo').click(function() {
+        $(this).focus().select();
+    })
 });
